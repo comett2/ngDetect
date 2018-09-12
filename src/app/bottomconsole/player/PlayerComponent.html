@@ -1,0 +1,17 @@
+<div *ngIf="visible"
+	 class="player-container">
+	<div class="fas fa-backward"
+		 [class.disabled]="!existsPrevious"
+		(click)="previous()">
+
+	</div>
+	<div class="fas fa-play"
+		 [class.disabled]="!existsNext">
+
+	</div>
+	<div class="fas fa-forward"
+		 [class.disabled]="!existsNext"
+		(click)="next()">
+
+	</div>
+</div>

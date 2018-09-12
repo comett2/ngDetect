@@ -1,0 +1,25 @@
+:host {
+	width: 160px;
+}
+
+.fas {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.fa-play {
+	padding: 0 20px;
+}
+
+.player-container {
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #f5f5f5;
+	color: #737273;
+	border-radius: 3px;
+	border: 1px solid #868484;
+}
+
+.disabled {
+	opacity: 0.2;
+}

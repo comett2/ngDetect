@@ -1,0 +1,35 @@
+<div>
+	<sp-divider [text]="label"></sp-divider>
+	<!--<label class="container">-->
+		<!--<input *ngIf="!allHooksChecked"-->
+			   <!--class="all-hooks"-->
+			   <!--(click)="allHooksClicked()"-->
+			   <!--type="checkbox"/>-->
+		<!--<input *ngIf="allHooksChecked"-->
+			   <!--class="all-hooks"-->
+			   <!--(click)="allHooksClicked()"-->
+			   <!--type="checkbox"-->
+			   <!--checked/>-->
+		<!--<span class="checkmark"></span>-->
+	<!--</label>-->
+	<label class="container all">all
+		<input *ngIf="!allHooksChecked" (click)="allHooksClicked()" type="checkbox"/>
+		<input *ngIf="allHooksChecked" (click)="allHooksClicked()" type="checkbox" checked/>
+		<span class="checkmark"></span>
+	</label>
+	<div *ngFor="let hook of hooks"
+		 class="hook-with-label">
+		<div class="hook-color"
+			 [style.background]="hook.color"></div>
+		<!--<input *ngIf="!hook.enabled" type="checkbox"/>-->
+		<!--<input *ngIf="hook.enabled" type="checkbox" checked/>-->
+		<!--<div class="label">{{hook.name}}</div>-->
+		<label class="container">
+			{{hook.name}}
+			<input *ngIf="!hook.enabled" (click)="toggle(hook)" type="checkbox"/>
+			<input *ngIf="hook.enabled" (click)="toggle(hook)" type="checkbox" checked/>
+			<span class="checkmark"></span>
+		</label>
+	</div>
+</div>
+

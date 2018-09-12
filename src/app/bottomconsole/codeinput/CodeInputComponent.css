@@ -1,0 +1,44 @@
+:host {
+	flex: 0 0 70%;
+}
+
+textarea {
+	height: 194px;
+	width: 99%;
+	font-size: 16px;
+	text-indent: 30px;
+}
+
+.left-side {
+	width: 70%;
+}
+
+.right-side {
+	width: 30%;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.container {
+	display: flex;
+}
+
+.text-function {
+	font-style: italic;
+	margin-left: 20px;
+}
+
+select {
+	width: 98%;
+	height: 30px;
+	background: white;
+	font-size: 16px;
+}
+
+.fa-telegram-plane {
+	font-size: 190px;
+}

@@ -1,0 +1,21 @@
+:host {
+	z-index: 30;
+}
+
+.collecting-type-picker {
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 20px 20px 20px 20px;
+	border: 1px solid #ccc;
+	box-shadow: 1px 6px 23px 0px rgba(0, 0, 0, 0.75);
+}
+
+.left-sidebar-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 20px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}

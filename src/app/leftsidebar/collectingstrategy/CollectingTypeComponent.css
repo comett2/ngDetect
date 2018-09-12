@@ -1,0 +1,24 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: green;
+	color: white;
+	cursor: pointer;
+	height: 30px;
+	padding: 0 7px;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+.collecting-type-picker {
+	font-size: 14px;
+}
+
+.start-end-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+	font-size: 14px;
+}

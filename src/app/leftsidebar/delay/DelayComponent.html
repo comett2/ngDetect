@@ -1,0 +1,38 @@
+<sp-divider [text]="label"></sp-divider>
+<div class="type-container">
+	<input *ngIf="isDelayTime()"
+		   type="radio"
+		   class="radio"
+		   checked
+		   (click)="selectTimeType()">
+	<input *ngIf="isDelayStepByStep()"
+		   type="radio"
+		   class="radio"
+		   (click)="selectTimeType()">
+	<form [formGroup]="form">
+		<input *ngIf="isDelayTime()"
+			   formControlName="delay"
+			   placeholder="Type..."
+			   type="number">
+		<input *ngIf="isDelayStepByStep()"
+			   formControlName="delay"
+			   placeholder="Type..."
+			   type="number"
+			   disabled
+			   class="disabled">
+		ms
+	</form>
+</div>
+<div class="type-container">
+	<input *ngIf="isDelayTime()"
+		   type="radio"
+		   name="type"
+		   class="radio"
+		   (click)="selectStepByStep()">
+	<input *ngIf="isDelayStepByStep()"
+		   type="radio"
+		   name="type"
+		   class="radio"
+		   checked
+		   (click)="selectStepByStep()"> Step by step <br>
+</div>

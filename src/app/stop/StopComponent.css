@@ -1,0 +1,18 @@
+:host {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+}
+
+.stop-button {
+	background: #e42c2c;
+	color: white;
+	cursor: pointer;
+	height: 120px;
+	width: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+}
+

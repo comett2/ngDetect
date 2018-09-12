@@ -1,0 +1,162 @@
+:host {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+}
+
+.card-container {
+	background: #fbc35c;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial;
+	font-size: 40px;
+}
+
+@keyframes OnInit {
+	0% {
+		background: #afff4b; /* lovely yellow colour */
+	}
+	50% {
+		background: #afff4b; /* lovely yellow colour */
+	}
+	65% {
+		background: #afff4b; /* lovely yellow colour */
+	}
+	100% {
+		background: #fbc35c;
+	}
+}
+
+.OnInit {
+	animation: OnInit 2s;
+	animation-duration: 1s;
+}
+
+
+@keyframes OnChanges {
+	0% {
+		background: #ffaf31; /* lovely yellow colour */
+	}
+	50% {
+		background: #ffaf31; /* lovely yellow colour */
+	}
+	65% {
+		background: #ffaf31; /* lovely yellow colour */
+	}
+	100% {
+		background: #fbc35c;
+	}
+}
+
+.OnChanges {
+	animation: OnChanges 2s;
+	animation-duration: 1s;
+}
+
+@keyframes DoCheck {
+	0% {
+		background: #00d8ff; /* lovely yellow colour */
+	}
+	50% {
+		background: #00d8ff; /* lovely yellow colour */
+	}
+	65% {
+		background: #00d8ff; /* lovely yellow colour */
+	}
+	100% {
+		background: #fbc35c;
+	}
+}
+
+.DoCheck {
+	animation: DoCheck 2s;
+	animation-duration: 1s;
+}
+
+@keyframes AfterViewInit {
+	0% {
+		background: #c989ff; /* lovely yellow colour */
+	}
+	50% {
+		background: #c989ff; /* lovely yellow colour */
+	}
+	65% {
+		background: #c989ff; /* lovely yellow colour */
+	}
+	100% {
+		background: #fbc35c;
+	}
+}
+
+.AfterViewInit {
+	animation: AfterViewInit 2s;
+	animation-duration: 1s;
+}
+
+@keyframes AfterViewChecked {
+	0% {
+		background: #ff7f65; /* lovely yellow colour */
+	}
+	50% {
+		background: #ff7f65; /* lovely yellow colour */
+	}
+	65% {
+		background: #ff7f65; /* lovely yellow colour */
+	}
+	100% {
+		background: #fbc35c;
+	}
+}
+
+.AfterViewChecked {
+	animation: AfterViewChecked 2s;
+	animation-duration: 1s;
+}
+
+@keyframes AfterContentInit {
+	0% {
+		background: #ffc907; /* lovely yellow colour */
+	}
+	50% {
+		background: #ffc907; /* lovely yellow colour */
+	}
+	65% {
+		background: #ffc907; /* lovely yellow colour */
+	}
+	100% {
+		background: #fbc35c;
+	}
+}
+
+.AfterContentInit {
+	animation: AfterContentInit 2s;
+	animation-duration: 1s;
+}
+
+
+@keyframes AfterContentChecked {
+	0% {
+		background: #0505ff; /* lovely yellow colour */
+	}
+	50% {
+		background: #0505ff; /* lovely yellow colour */
+	}
+	65% {
+		background: #0505ff; /* lovely yellow colour */
+	}
+	100% {
+		background: #fbc35c;
+	}
+}
+
+.AfterContentChecked {
+	animation: AfterContentChecked 2s;
+	animation-duration: 1s;
+}

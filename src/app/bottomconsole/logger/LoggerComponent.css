@@ -1,0 +1,12 @@
+:host {
+	flex: 0 0 30%;
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+	background: black;
+	color: white;
+}
+
+.container {
+	overflow: scroll;
+	height: 100%;
+}

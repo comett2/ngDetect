@@ -1,0 +1,24 @@
+<sp-divider [text]="label"></sp-divider>
+<div class="collecting-type-picker">
+	<form>
+		<input type="radio" name="type" checked (click)="selectLive()"> Live <br>
+		<div class="start-end-container">
+			<div>
+				<input type="radio" name="type" (click)="selectStartEnd()"> Start - End<br>
+			</div>
+			<div *ngIf="isStartEndType()"
+				 class="container">
+				<div *ngIf="!started"
+					 class="start"
+					 (click)="start()">
+					START
+				</div>
+				<div *ngIf="started"
+					 class="release"
+					 (click)="release()">
+					RELEASE
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

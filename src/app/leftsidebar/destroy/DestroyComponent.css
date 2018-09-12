@@ -1,0 +1,24 @@
+input {
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	font-size: 14px;
+	width: 100px;
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+}
+
+button {
+	margin-left: 20px;
+	height: 30px;
+	background: #e42c2c;
+	color: white;
+	border: none;
+	font-size: 14px;
+	border-radius: 3px;
+	cursor: pointer;
+}

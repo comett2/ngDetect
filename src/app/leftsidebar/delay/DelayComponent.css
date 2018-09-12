@@ -1,0 +1,28 @@
+input {
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	font-size: 14px;
+	width: 100px;
+}
+
+input.radio {
+	display: flex;
+	align-items: center;
+	width: 20px;
+}
+
+.type-container {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+}
+
+.type-container:first-of-type {
+	margin-bottom: 5px;
+}
+
+input.disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}

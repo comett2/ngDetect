@@ -1,0 +1,11 @@
+:host {
+	flex: 0 0 70%;
+	position: relative;
+}
+
+.element {
+	position: absolute;
+	width:10px;
+	height: 10px;
+	background: red;
+}
