@@ -12,7 +12,7 @@ export class CodeRunnerService {
 
 	}
 
-	run(id: number, code: () => void): void {
+	run(id: number, code: string): void {
 		this.code$.next(new Code(id, code));
 	}
 

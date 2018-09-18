@@ -14,7 +14,7 @@ export class CodeInputComponent implements OnInit {
 	codeArea: any;
 
 	elements = [];
-	selectedOption: any;
+  selectedValue: any = 1;
 
 	constructor(private cardCollectorService: CardCollectorService,
 				private changeDetectorRef: ChangeDetectorRef,
@@ -31,11 +31,7 @@ export class CodeInputComponent implements OnInit {
 			});
 	}
 
-	selectOption(option: any) {
-		this.selectedOption = option;
-	}
-
 	run() {
-		this.codeRunnerService.run(this.selectedOption, this.codeArea.nativeElement.value);
+		this.codeRunnerService.run(this.selectedValue, this.codeArea.nativeElement.value);
 	}
 }

@@ -10,3 +10,12 @@
 	overflow: scroll;
 	height: 100%;
 }
+
+.fa-trash-alt {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}

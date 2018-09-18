@@ -7,6 +7,8 @@ textarea {
 	width: 99%;
 	font-size: 16px;
 	text-indent: 30px;
+  background: black;
+  color: white;
 }
 
 .left-side {
@@ -15,7 +17,7 @@ textarea {
 
 .right-side {
 	width: 30%;
-	margin-top: 18px;
+	margin-top: 5px;
 	margin-bottom: 18px;
 	display: flex;
 	flex-direction: column;
@@ -30,6 +32,7 @@ textarea {
 .text-function {
 	font-style: italic;
 	margin-left: 20px;
+  margin-top: 10px;
 }
 
 select {
@@ -39,6 +42,6 @@ select {
 	font-size: 16px;
 }
 
-.fa-telegram-plane {
-	font-size: 190px;
+.fa-play-circle {
+  font-size: 180px;
 }

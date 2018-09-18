@@ -1,16 +1,15 @@
 <div class="container">
 	<div class="left-side">
-		<div class="text-function">function (changeDetectorRef, elementRef) &#123;</div>
+		<div class="text-function">function (changeDetectorRef, elementRef, renderer, bindNewValueToView()) &#123;</div>
 		<textarea #codeArea type="text"></textarea>
 		<div class="text-function">&#125;</div>
 	</div>
 	<div class="right-side">
-		<select>
-			<option *ngFor="let option of elements"
-					(click)="selectOption(option)"
-					[value]="option">{{option}}</option>
-		</select>
-		<div class="fab fa-telegram-plane"
+    Component ID:
+		<select [(ngModel)]="selectedValue">
+      <option *ngFor="let option of elements" [value]="option">{{option}}</option>
+    </select>
+		<div class="far fa-play-circle"
 			(click)="run()">
 		</div>
 	</div>
