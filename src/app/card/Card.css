@@ -72,3 +72,21 @@ onpush-card:last-of-type {
 	justify-content: space-around;
 	position: relative;
 }
+
+.changable-value-left {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: #0014ff;
+  margin-left: -55px;
+  border-radius: 100% 0 0 100%;
+}
+
+.changable-value-right {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: #0014ff;
+  margin-left: 55px;
+  border-radius: 0 100% 100% 0;
+}

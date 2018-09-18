@@ -41,6 +41,8 @@ import { Code } from '../bottomconsole/codeinput/Code';
 					class="card-creation-actions"
 					(action)="resolveAction($event)">
 			</card-creation-actions>
+      <div [class.changable-value-left]="!changableValue"
+           [class.changable-value-right]="changableValue"></div>
 		</div>
 
 		<div class="cards-container"
@@ -81,6 +83,7 @@ export class OnpushCardComponent implements OnInit, OnChanges, DoCheck, AfterVie
 	private actualCycle: Cycle;
 	private destroy$ = new Subject();
 	private link: Link;
+  private changableValue = false;
 
 	constructor(private lifecycleHooksManagerService: LifecycleHooksManagerService,
 				private lifecycleStreamManager: LifecycleStreamManager,
@@ -130,9 +133,12 @@ export class OnpushCardComponent implements OnInit, OnChanges, DoCheck, AfterVie
 		this.codeRunnerService
 			.onRun()
 			.subscribe((code: Code) => {
-				if (code.id === this.id ) {
-					code.code(this.changeDetectorRef, this.elementRef);
-				}
+        if (code.id == this.id ) {
+          let func = new Function('changeDetectorRef', 'elementRef', 'renderer', 'bindNewValueToView', code.code);
+          func(this.changeDetectorRef, this.elementRef, this.renderer, () => this.bindNewValueToView());
+
+          // eval(code.code)(this.changeDetectorRef, this.elementRef, this);
+        }
 			});
 		if (this.id === undefined) {
 			this.id = this.lifecycleStreamManager.counter++;
@@ -193,6 +199,10 @@ export class OnpushCardComponent implements OnInit, OnChanges, DoCheck, AfterVie
 	click(): void {
 		console.log('click');
 	}
+
+  bindNewValueToView(): void {
+    this.changableValue = !this.changableValue;
+  }
 
 	resolveAction(event: CardCreationEvent) {
 		if (event === CardCreationEvent.NEW_ONPUSH) {

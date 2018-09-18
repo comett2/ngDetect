@@ -28,4 +28,9 @@ export class LoggerComponent implements OnInit {
 				this.elementRef.nativeElement.scrollTop = this.elementRef.nativeElement.scrollHeight;
 			});
 	}
+
+  clearLog() {
+	  this.cycles = [];
+    this.changeDetectorRef.detectChanges();
+  }
 }

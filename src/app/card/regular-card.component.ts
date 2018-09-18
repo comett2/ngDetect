@@ -44,6 +44,8 @@ import { Code } from '../bottomconsole/codeinput/Code';
 					class="card-creation-actions"
 					(action)="resolveAction($event)">
 			</card-creation-actions>
+      <div [class.changable-value-left]="!changableValue"
+           [class.changable-value-right]="changableValue"></div>
 		</div>
 
 		<div class="cards-container"
@@ -84,6 +86,7 @@ export class RegularCard implements OnInit, OnChanges, DoCheck, AfterViewInit, A
 	private actualCycle: Cycle;
 	private destroy$ = new Subject();
 	private link: Link;
+	private changableValue = false;
 
 	constructor(private lifecycleHooksManagerService: LifecycleHooksManagerService,
 				private lifecycleStreamManager: LifecycleStreamManager,
@@ -137,8 +140,12 @@ export class RegularCard implements OnInit, OnChanges, DoCheck, AfterViewInit, A
 		this.codeRunnerService
 			.onRun()
 			.subscribe((code: Code) => {
-				if (code.id === this.id ) {
-					code.code(this.changeDetectorRef, this.elementRef);
+			  // this.changeDetectorRef.detectChanges();
+				if (code.id == this.id ) {
+          let func = new Function('changeDetectorRef', 'elementRef', 'renderer', 'bindNewValueToView', code.code);
+          func(this.changeDetectorRef, this.elementRef, this.renderer, () => this.bindNewValueToView());          // Function(code.code)(this.changeDetectorRef, this.elementRef,
+          // this, () =>
+          // this);
 				}
 			});
 		if (this.id === undefined) {
@@ -187,6 +194,10 @@ export class RegularCard implements OnInit, OnChanges, DoCheck, AfterViewInit, A
 			this.lifecycleStreamManager.hookFired(new Cycle(this.id, 'AfterViewChecked'));
 		}
 	}
+
+	bindNewValueToView(): void {
+	  this.changableValue = !this.changableValue;
+  }
 
 	ngOnDestroy() {
 		if (this.lifecycleHooksManagerService.isActive('OnDestroy')) {
