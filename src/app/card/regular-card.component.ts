@@ -87,7 +87,6 @@ export class RegularCard implements OnInit, OnChanges, DoCheck, AfterViewInit, A
 	private actualCycle: Cycle;
 	private destroy$ = new Subject();
 	private link: Link;
-	private changableValue = false;
 
 	constructor(private lifecycleHooksManagerService: LifecycleHooksManagerService,
 				private lifecycleStreamManager: LifecycleStreamManager,

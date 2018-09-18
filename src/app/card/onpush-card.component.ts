@@ -84,7 +84,6 @@ export class OnpushCardComponent implements OnInit, OnChanges, DoCheck, AfterVie
 	private actualCycle: Cycle;
 	private destroy$ = new Subject();
 	private link: Link;
-  private changableValue = false;
 
 	constructor(private lifecycleHooksManagerService: LifecycleHooksManagerService,
 				private lifecycleStreamManager: LifecycleStreamManager,
