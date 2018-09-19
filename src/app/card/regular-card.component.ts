@@ -222,7 +222,7 @@ export class RegularCard implements OnInit, OnChanges, DoCheck, AfterViewInit, A
 	}
 
 	destroyMe(): void {
-		this.destroyMe$.next(this.id)
+		this.destroyMe$.next(this.id);
 	}
 
 	private addDefaultCard(): void {

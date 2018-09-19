@@ -44,4 +44,5 @@ select {
 
 .fa-play-circle {
   font-size: 180px;
+  cursor: pointer;
 }

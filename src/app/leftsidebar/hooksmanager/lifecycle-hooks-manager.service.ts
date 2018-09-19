@@ -7,14 +7,14 @@ import { ReplaySubject } from 'rxjs/ReplaySubject';
 export class LifecycleHooksManagerService {
 
 	private hooks: Array<Hook> = [
-		new Hook('OnInit', true, '#afff4b'),
-		new Hook('OnDestroy', true, 'red'),
 		new Hook('OnChanges', true, '#ffaf31'),
+		new Hook('OnInit', true, '#afff4b'),
 		new Hook('DoCheck', true, '#00d8ff'),
-		new Hook('AfterViewInit', true, '#c989ff'),
-		new Hook('AfterViewChecked', true, '#ff7f65'),
 		new Hook('AfterContentInit', true, '#ffc907'),
-		new Hook('AfterContentChecked', true, '#0505ff')];
+		new Hook('AfterContentChecked', true, '#0505ff'),
+		new Hook('AfterViewInit', true, '#c989ff'),
+		new Hook('AfterViewChecked', true, '#ff7f65')];
+		// new Hook('OnDestroy', true, 'red')];
 	private hooks$ = new ReplaySubject<Array<Hook>>(1);
 
 	constructor() {
@@ -39,6 +39,9 @@ export class LifecycleHooksManagerService {
 
 	isActive(hookName: string): boolean {
 		let find = this.hooks.find((hook: Hook) => hook.name === hookName);
+		if (find === undefined) {
+		  return false;
+    }
 		return find.enabled;
 	}
 }
